@@ -181,3 +181,42 @@ img{
         column-gap: 4rem;
     }
 }
+
+.entrada{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{  /**con este selector, escogemos la ultima entrada, seindo las otras dos iguales,
+                         esta linea nos permite escojer la ultima, mas facil**/
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    border:5px solid var(--negro);
+    padding: 15px 30px;
+    background-color: var(--blanco);
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: var(--negro);
+    letter-spacing: 3px;
+    font-size: 1.8rem;
+    position: relative;
+    text-transform: uppercase;
+    outline: none;
+    
+}
+
+@media(min-width:768px) {
+    .boton{
+        display: inline-block;
+    }
+}
+
+.boto--primario{
+    background-color: var(--blanco);
+}
