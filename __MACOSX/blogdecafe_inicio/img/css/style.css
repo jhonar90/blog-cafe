@@ -165,6 +165,7 @@ img{
     text-transform: uppercase;
     outline: none;
     
+    
 }
 
 @media(min-width:768px) {
@@ -173,6 +174,9 @@ img{
     }
 }
 
+.boton:hover{
+    cursor: pointer;
+}
 .boto--primario{
     background-color: var(--blanco);
 }
@@ -193,17 +197,21 @@ img{
 }
 
 
-.widget-curso__labe{
+.widget-curso__labe,
+.curso__label{
     font-size: var(--fuenteHeading);
     font-weight: bold;
 }
 
-.widget-curso__info{
+.widget-curso__info,
+.curso__info{
     font-weight: 400;
 }
 
 .widget-curso__labe,
-.widget-curso__info{
+.widget-curso__info,
+.curso__info,
+.curso__label{
     font-size: 2rem;
 }
 
@@ -226,6 +234,7 @@ img{
     outline: none;
     overflow: hidden;
     cursor: pointer;
+    
 }
 
 .boton--secundario__dos{
@@ -261,11 +270,87 @@ img{
 .footer{
     background-color: var(--negro);
     padding: 3rem 0;
-    height: 15rem;
-    margin-top: 4rem;
+    margin-top: 4rem; 
+    
 }
 
+/**NOSOTROS**/
+@media(min-width: 768px){
+    .sobre-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sobre-nosotros__texto{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .sobre-nosotros__imagen{
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    /**con ccs grid
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }**/
+}
+
+/**CURSOS**/
+
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+
+}
+
+@media(min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.curso:last-of-type{
+    border: none;
+}
+
+/**ENTRADA DE BLOG**/
 
 
+/**CONTACTO**/
+
+.contacto-bg{
+    background-image: url(../img/CONTACTO.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__labe{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea{
+    height: 20rem;
+}
     
         
