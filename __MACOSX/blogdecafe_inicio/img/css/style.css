@@ -72,8 +72,15 @@ img{
 
 /**HEADER**/
 
+.webp .header{
+    background-image: url(../img/banner.webp); /**a qui estamos dicienso al navegador que si soporta webp utilize ese formato**/
+}
+
+.no-webp .header{
+    background-image: url(../img/banner.jpg);/** y aca es al contrario, si no soporta webp, que utlize el formato jpg**/
+}
+
 .header{
-    background-image: url(../img/banner.jpg);
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
