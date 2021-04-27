@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloGCafe</title>
+
+    <!--prefetch--> 
+
+    <link rel="prefetch" href="cursos.html" as="document"> <!--esta pagina cargaria mas rapido cuando el usuario-->
+
+    <!-- preload-->
+
+    <link rel="preload" href="css/normalyce.css"> <!--con preload, estos archivos cargaran rapidamente-->
     <link rel="stylesheet" href="css/normalyce.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap"
+    crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet"> 
+
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet"> 
+    
+    
 </head>
-    <title>Document</title>
-</head>
+    
+
 <body>
 
      <header class="header">
@@ -44,8 +60,11 @@
 
                  <article class="entrada">
                      <div class="entrada__imagen">
-                         <img src="img/blog1.jpg" alt="imagen blog" loading="lazy">
-                     </div>
+                         <picture> 
+                             <source srcset="img/blog1.webp" type="image/webp" loading="lazy"> <!--aqui usamos los dos formatos de imagen y el navegara usara el que soporte, siendo webp, el mas libiano-->
+                             <img src="img/blog1.jpg" alt="imagen blog" loading="lazy" ><!--es bueno agregar este atributo a nuestras imagenes-->
+                         </picture>
+                        </div>
 
                      <div class="entrada__contenido">
                          <h4 class="no-margin">Tipos de Granos De cafe</h4>
@@ -58,7 +77,10 @@
 
                  <article class="entrada">
                     <div class="entrada__imagen">
-                        <img src="img/blog2.jpg" alt="imagen blog" loading="lazy">
+                        <picture> 
+                            <source srcset="img/blog2.webp" type="image/webp" loading="lazy">
+                            <img src="img/blog2.jpg" alt="imagen blog" loading="lazy" >
+                        </picture>    
                     </div>
 
                     <div class="entrada__contenido">
@@ -72,7 +94,10 @@
 
                 <article class="entrada">
                     <div class="entrada__imagen">
-                        <img src="img/blog3.jpg" alt="imagen blog" loading="lazy">
+                        <picture> 
+                            <source srcset="img/blog3.webp" type="image/webp" loading="lazy">
+                            <img src="img/blog3.jpg" alt="imagen blog" loading="lazy" >
+                        </picture>
                     </div>
 
                     <div class="entrada__contenido">
@@ -141,7 +166,5 @@
             
         </footer>
       
-
-    
 </body>
 </html>
